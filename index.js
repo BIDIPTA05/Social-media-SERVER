@@ -26,7 +26,7 @@ app.get("/users", async (req, res) => {
     res.status(500).json({ message: "Error fetching users" });
   }
 });
-//route to show us the individuual profiles
+//route to show us the individuual profiles here
 app.get("/users/:id", async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
